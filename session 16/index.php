@@ -20,7 +20,7 @@ function mySum($a, $b){
 	echo "<br>";
 	echo mySum(5, 6);
 	echo "<br>";
-	$tong = mySum(122, 5); 
+	$tong = mySum(456, 5); 
 	if ($tong %2 == 0) {
 		 echo "tổng số này là chẳn";
 	}else if ($tong %3 == 0){
@@ -68,7 +68,7 @@ function mySum($a, $b){
 		}else if($dv %3 == 0){
 			echo "đơn vị là lẽ và chia hết cho 3 <br>";
 		}else{
-			echo "đơn vị là lẻ";
+			echo "đơn vị là lẻ và không chia hết cho 3";
 		}
 	}
 ?>
