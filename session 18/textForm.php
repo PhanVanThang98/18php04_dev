@@ -11,15 +11,9 @@
 </head>
 <body>
 	<?php
-	$errName = '';
-	$errPass = '';
-	$errRePass = '';
-	$errcom = '';
-	$erremail = '';
-	$errgender = '';
+	$errName = $errPass = $errRePass = $errcom = $erremail = $errgender = '';
 	$check = true;
-	$name = $password = $repassword = $errGender 
-	= $email = $comment = $errCity = '';
+	$name = $password = $repassword = $errGender = $email = $comment = $errCity = '';
 	$checkMale = $checkFemale = $checkOther = '';
 	$checkDN = $checkHN = $checkHCM = '';
 	if (isset($_POST['submit'])) {
@@ -31,6 +25,8 @@
 		$email = $_POST['email'];
 		$gender = $_POST['gender'];
 		$city = $_POST['city'];
+		$avt = $_FILES['avatar']['name'];
+   		$src = "img/".$avt;
 		if ($name == '') {
 			$check = false;
 			$errName = 'Please input your name!';
@@ -90,7 +86,7 @@
 			echo "Email là: ";
 			echo $email;
 			echo "<br>";
-			echo "password là : đéo";
+			echo "password là: *********";
 			echo "<br>";
 			echo "tình trạng: ";
 			echo $comment;
@@ -100,6 +96,7 @@
 			echo "<br>";
 			echo "sinh sống tại: ";
 			echo $city;
+			echo "<b>Avatar : </b> <img src="."img/".$avt." />";
 			}
 	}	
 	?>
